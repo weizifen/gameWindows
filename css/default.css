@@ -1,0 +1,44 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,input,button,textarea,p,blockquote{margin:0;padding:0}
+table{border-collapse:collapse;border-spacing:0}
+li{list-style:none}
+.list_classify3{ border-bottom:1px solid #d7d7d7; border-top:1px solid #d7d7d7; background:#fff; margin:10px 0; overflow:hidden;}
+.list_classify3 li{ float:left; width:33%; border-top:1px solid #ececec; border-left:1px solid #ececec; padding:3% 0; text-align:center;}
+.list_classify3 li img{ width:70px; display:block; text-align:center; margin: 0 auto  6px auto; border-radius:16px;}
+.list_classify3 li a{ color:#333; font-size:14px; display:block; font-weight:700;}
+.list_classify3 li:nth-child(1),.list_classify3 li:nth-child(4),.list_classify3 li:nth-child(7),.list_classify3 li:nth-child(10){ border-left:none;}
+.list_classify3 li:nth-child(1),.list_classify3 li:nth-child(2),.list_classify3 li:nth-child(3),.list_classify3 li:nth-child(10){ border-top:none;}
+.list_classify3 li:nth-child(7),.list_classify3 li:nth-child(8),.list_classify3 li:nth-child(9){ border-bottom:1px solid #ececec;}
+.list_classify3 li:nth-child(10){ border-right:1px solid #ececec;}
+
+/*
+.list_classify3{ margin:15px 0; text-align:center;  overflow:hidden;}
+.list_classify3 li{ width:28%; background:#fff; border-radius:0px; margin:5px; padding:10px 0; display:inline-block;}
+.list_classify3 li img{ width:70px; height:70px; text-align:center; margin:0 auto 5px auto; display:block; vertical-align:middle; border-radius:16px;}
+.list_classify3 li a{ font-size:16px; display:block;} */
+
+
+.game-list{ margin:0 0 10px 0; background:#fff;}
+.game-list li{ position:relative; background:#fff; /*border-bottom:1px solid #d7d7d7;*/ padding:12px 10px; overflow:hidden;}
+.game-list li:last-child{ border-bottom:none;}
+.game-list li a{ display:block; width:100%;/* overflow:hidden;*/}
+.game-list li:nth-child(1) { border-top:none;}
+.game-list li i { float:left; background:url(../images/icon-default.png) no-repeat; background-size:cover; width:64px; height:64px; display:inline-block; overflow:hidden; margin:3px 0 0 0; border-radius: 15px;}
+.game-list li i img{width:100%; height: 100%;}
+.game-list li i span.new{ position:absolute; left:7px; top:10px;}
+.game-list li i.icon-wdlb{ width:12px; height:12px; float:none; vertical-align:top; background:url(../images/icon-wdlb.png) no-repeat; background-size:cover; border-radius:0; margin:9px 0 0 5px;}
+.game-list li dl{ float:left; margin-left:10px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; width:70%;}
+.game-list li dt{ font-size:14px; line-height:30px; color:#191919;}
+.game-list li dt strong{ font-weight:500;}
+.game-list li dd,.game-list li dd p{ color:#666; line-height:18px; height:18px; font-size:12px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis;}
+.game-list li dd.fenlei{ color:#666; font-size:12px;}
+.game-list li .play{ position:absolute; right:3%; top:26px; width:74px; display:block; vertical-align:middle}
+.game-list li .golook{ position:absolute; right:10px; top:28px; width:70px; height:30px; display:block; vertical-align:middle; background:#007aff; text-align:center; line-height:30px; border-radius:100px; color:#fff; font-size:1.1em;}
+.game-list li .golook2{ position:absolute; right:10px; top:12px; width:65px; height:23px; display:block; vertical-align:middle; background:#007aff; text-align:center; line-height:24px; border-radius:100px; color:#fff; font-size:1.1em;}
+.game-list li .shouc{ position:absolute; right:10px; bottom:11px; width:65px; height:23px; display:block; vertical-align:middle; border:1px solid #00BB9C; text-align:center; line-height:24px; border-radius:100px; color:#00BB9C; font-size:1.1em;}
+.game-list li .shouc_off{ position:absolute; right:10px; bottom:11px; width:65px; height:23px; display:block; vertical-align:middle; border:1px solid #00BB9C; text-align:center; line-height:24px; border-radius:100px; color:#fff; font-size:1.1em; background:#00BB9C;}
+.game-list li .star{ height:21px; margin-top:3px;}
+.game-list li .star img{ width:14px; height:14px; vertical-align:middle; float:left;}
+.game-list li .txt{ width:72%; margin:0 0 0 10px; overflow:hidden;}
+.game-list li .txt .Red{ color:#f00;}
+
+.game-list .empty{ height:260px; border-top:1px solid #eaeaea; border-bottom:1px solid #eaeaea; color:#aaa; text-align:center; text-align:center; line-height:200px; background:#fff;}

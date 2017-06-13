@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>休闲</title>
+</head>
+<body>
+    <section class="game-list">
+        <ul></ul>
+        <div class="mod-more" id="havemore"><a href="javascript:void(0)" id="moregame">点击加载更多</a></div>
+        <div class="mod-more" style="display:none;" id="notmore"><a href="javascript:void(0)">没有更多数据</a></div>
+    </section>
+    <script type="text/javascript">
+        $(function(){
+            $("#moregame").click( function () {
+                getGameList();
+            })
+        })
+        getGameList()
+        var page = 1;
+        function getGameList(){
+            if(page != 0)
+            {
+                $.ajax({
+                    url: '/getList.html',
+                    type: "get",
+                    data: {
+                        page: page,
+                        catid: 11			},
+                    dataType: "json",
+                    success: function(res) {
+                        if(res.data.length>0){
+                            var ulhtml = "";
+                            var game_data = res.data;
+                            var today_start = '2017-06-12';
+                            for(var i=0;i<game_data.length;i++){
+                                var is_gift = '';
+                                if(game_data[i]['is_gift'] == 1){
+                                    is_gift = '<i class="icon-wdlb"></i>';
+                                }
+                                ulhtml += '<li>'+
+                                    '<a href="'+game_data[i]['game_page_url']+'">'+
+                                    '<i><img src="'+game_data[i]['game_logo']+'" /></i>'+
+                                    '<dl>'+
+                                    '<dt><strong>'+game_data[i]['game_name']+'</strong>'+is_gift+'</dt>'+
+                                    '<dd class="fenlei">类型：'+game_data[i]['game_type_label']+'</dd>'+
+                                    '<dd>'+game_data[i]['game_summary']+'</dd>'+
+                                    '</dl>'+
+                                    '<a href="'+game_data[i]['game_path']+'" class="golook">开始玩</a>'+
+                                    '</a>'+
+                                    '</li>';
+                            }
+                            $(".game-list ul").append(ulhtml);
+                        }
+                        if(game_data == null || game_data.length<15)
+                        {
+                            page = 0;
+                            $("#havemore").hide();
+                            $("#notmore").show();
+                        }else{
+                            page++;
+                        }
+                    },
+                    error: function() {
+                        alert('连接出错，请稍后再试！');
+                    }
+                });
+            }else{
+                $("#havemore").hide();
+                $("#notmore").show();
+            }
+        }
+    </script>
+
+</body>
+</html>
