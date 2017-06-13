@@ -10,11 +10,11 @@ li{list-style:none}
 .list_classify3 li:nth-child(7),.list_classify3 li:nth-child(8),.list_classify3 li:nth-child(9){ border-bottom:1px solid #ececec;}
 .list_classify3 li:nth-child(10){ border-right:1px solid #ececec;}
 
-/*
-.list_classify3{ margin:15px 0; text-align:center;  overflow:hidden;}
-.list_classify3 li{ width:28%; background:#fff; border-radius:0px; margin:5px; padding:10px 0; display:inline-block;}
+
+/*.list_classify3{ margin:15px 0; text-align:center;  overflow:hidden;}*/
+/*.list_classify3 li{ width:28%; background:#fff; border-radius:0px; margin:5px; padding:10px 0; display:inline-block;}*/
 .list_classify3 li img{ width:70px; height:70px; text-align:center; margin:0 auto 5px auto; display:block; vertical-align:middle; border-radius:16px;}
-.list_classify3 li a{ font-size:16px; display:block;} */
+/*.list_classify3 li a{ font-size:16px; display:block;} */
 
 
 .game-list{ margin:0 0 10px 0; background:#fff;}
@@ -42,3 +42,8 @@ li{list-style:none}
 .game-list li .txt .Red{ color:#f00;}
 
 .game-list .empty{ height:260px; border-top:1px solid #eaeaea; border-bottom:1px solid #eaeaea; color:#aaa; text-align:center; text-align:center; line-height:200px; background:#fff;}
+
+
+/*mod-more*/
+.mod-more{ text-align:center; border-top:0px solid #d7d7d7; overflow:hidden;}
+.mod-more a{ background:#efefef; display:table; font-size:14px; line-height:30px; height:30px; padding:0 15px; margin:10px auto; color:#666; border-radius:100px;}
