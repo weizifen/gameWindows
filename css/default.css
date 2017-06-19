@@ -47,3 +47,7 @@ li{list-style:none}
 /*mod-more*/
 .mod-more{ text-align:center; border-top:0px solid #d7d7d7; overflow:hidden;}
 .mod-more a{ background:#efefef; display:table; font-size:14px; line-height:30px; height:30px; padding:0 15px; margin:10px auto; color:#666; border-radius:100px;}
+
+#back-to-top{ position: fixed; bottom: 80px; right: 3%; width: 40px; height: 40px; background:rgba(0,153,255,0.7); border-radius:100px; z-index:9999;}
+#back-to-top a{ text-align: center; text-decoration: none; color: #d1d1d1; display: block; width: 40px; height: 40px; -moz-transition: color 1s; -webkit-transition: color 1s; -o-transition: color 1s; outline:none;}
+

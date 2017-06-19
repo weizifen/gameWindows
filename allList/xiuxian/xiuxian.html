@@ -3,22 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, minimal-ui">
+
+    <script src="../../js/requestParam.js"></script>
 
     <title>休闲</title>
     <link href="../../css/default.css" rel="stylesheet" media="screen">
     <script src="../../js/jquery-2.0.3.min.js"></script>
     <script src="../../js/gameL.js"></script>
-
+    <link href="../../bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="../../bootstrap-3.3.7-dist/css/bootstrap-theme.css" rel="stylesheet" />
 
 </head>
 <body>
-    <section class="list_classify3">
+<!--标题-->
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">休闲</a>
+        </div>
+    </div><!-- /.container-fluid -->
+</nav>
+<script>
+    $(function () {
+        if(window.param.id==1){
+            $(".navbar-brand").text("休闲");
+        }else if(window.param.id==2){
+            $(".navbar-brand").text("美女");
+        }else if(window.param.id==3){
+            $(".navbar-brand").text("小清新");
+        }else if(window.param.id==4){
+            $(".navbar-brand").text("益智");
+        }else if(window.param.id==5){
+            $(".navbar-brand").text("角色扮演");
+        }else if(window.param.id==6){
+            $(".navbar-brand").text("赛车");
+        }else if(window.param.id==7){
+            $(".navbar-brand").text("塔防");
+        }else if(window.param.id==8){
+            $(".navbar-brand").text("关卡");
+        }
+    })
+</script>
+
+
+
+
+<!--内容-->
+<div class="wraper">
+    <div class="list_classify3" style="margin: 0px;">
         <ul></ul>
         <div class="mod-more" id="havemore"><a href="javascript:void(0)" id="moregame">点击加载更多</a></div>
         <div class="mod-more" style="display:none;" id="notmore"><a href="javascript:void(0)">没有更多数据</a></div>
-    </section>
+    </div>
+</div>
     <script type="text/javascript">
-
+        var count=0;
         $(function(){
             $("#moregame").click( function () {
 
@@ -28,7 +69,41 @@
         getGameList()
         var page = 1;
         function getGameList() {
-            gamelist.xiuxian.forEach(function (result) {
+            var listData=[];
+            if(window.param.id==1){
+                listData=gamelist.xiuxian;
+            }else if(window.param.id==2){
+                listData=[];
+                listData=gamelist.meinv;
+            }else if(window.param.id==3){
+                listData=[];
+                listData=gamelist.xiaoqingxin;
+            }else if(window.param.id==4){
+                listData=[];
+                listData=gamelist.yizhi;
+            }else if(window.param.id==5){
+                listData=[];
+                listData=gamelist.juese;
+            }else if(window.param.id==6){
+                listData=[];
+                listData=gamelist.saiche;
+            }else if(window.param.id==7){
+                listData=[];
+                listData=gamelist.tafang;
+            }else if(window.param.id==8){
+                listData=[];
+                listData=gamelist.guanka;
+            }
+
+//            var tempA=[];
+//            for(var i=0;i<12;i++){
+//                tempA[i]=listData[i+count];
+//
+//            }
+//            count+=9;
+
+
+            listData.forEach(function (result) {
                 console.log(result.url);
                 var ulhtml = "";
                 ulhtml='<li>'+ '<a href="'+result.url+'">'+'<img src="'+result.imageUrl+'" alt="">'+result.gameName+'</a>'+'</li>'
@@ -54,7 +129,8 @@
 
             })
 
-        }
+
+
 
 
 //        function getGameList(){
@@ -110,8 +186,16 @@
 //                $("#havemore").hide();
 //                $("#notmore").show();
 //            }
-//        }
+        }
     </script>
+
+
+
+
+
+
+    <script src="../../js/jquery-2.0.3.min.js"></script>
+    <script src="../../bootstrap-3.3.7-dist/js/bootstrap.js"></script>
 
 </body>
 </html>
